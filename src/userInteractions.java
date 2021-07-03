@@ -10,10 +10,12 @@ public class userInteractions{
         System.out.print("Enter the zip code: ");
         int zip = scanner.nextInt();
         scanner.close();
+        System.out.println("-------");
         return zip;
     }
     public static void main(String[] args) throws IOException{
         int zip = getInput();
-        apiCall.getConnection(zip);
+        apiCall.getConnections(zip);
+        System.out.println("-------");
     }
 }
