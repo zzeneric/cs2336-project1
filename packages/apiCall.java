@@ -25,7 +25,6 @@ public class apiCall{
 
     public static JsonObject returnTemperatureJson(StringBuffer content){
         String newString = content + "";
-
         Gson gson= new Gson();
         JsonObject jsonObject = gson.fromJson( newString, JsonObject.class);
         JsonObject temperatureTable = gson.fromJson( jsonObject.get("main"), JsonObject.class);
